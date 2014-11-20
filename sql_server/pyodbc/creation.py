@@ -1,6 +1,6 @@
 from django.db.backends.creation import BaseDatabaseCreation
 import base64
-from django.utils.hashcompat import md5_constructor
+from hashlib import md5 as md5_constructor
 import random
 
 class DataTypesWrapper(dict):
