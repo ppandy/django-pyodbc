@@ -135,3 +135,8 @@ Credits
 * Filip Wasilewski (http://code.djangoproject.com/ticket/5246)
 * Wei guangjing `<http://djangopeople.net/vcc/>`_
 * mamcx (http://code.djangoproject.com/ticket/5062)
+
+Updates
+=======
+
+Forked 1/7/2105
