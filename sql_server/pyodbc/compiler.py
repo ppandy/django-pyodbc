@@ -110,7 +110,7 @@ class SQLCompiler(compiler.SQLCompiler):
         # get_columns needs to be called before get_ordering to populate
         # _select_alias.
         out_cols = self.get_columns(True)
-        ordering, ordering_group_by = self.get_ordering()
+        ordering, ordering_params, ordering_group_by = self.get_ordering()
         if strategy == USE_ROW_NUMBER:
             if not ordering:
                 meta = self.query.get_meta()
@@ -257,7 +257,7 @@ class SQLCompiler(compiler.SQLCompiler):
         # get_columns needs to be called before get_ordering to populate
         # select_alias.
         self.get_columns(with_col_aliases)
-        ordering, ordering_group_by = self.get_ordering()
+        ordering, ordering_params, ordering_group_by = self.get_ordering()
         if ordering:
             ord = ', '.join(ordering)
         else:
